@@ -10,7 +10,7 @@ def calcenergy(atoms):
     epot = atoms.get_potential_energy() / len(atoms)
     ekin = atoms.get_kinetic_energy() / len(atoms)
     temp = ekin / (1.5 * units.kB)
-    return epot, ekin, temp, epot + ekin
+    return epot, ekin, temp, epot + 2*ekin
 
 def run_md():
     """Run a molecular dynamics simulation of copper."""
